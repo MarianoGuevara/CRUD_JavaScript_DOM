@@ -1,0 +1,60 @@
+#body
+{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#padreDeContenedor
+{
+
+    font-family: 'Verdana';
+    font-size: 90%;
+    background-color: rgb(218, 218, 218);
+    border: 1px solid black;
+}
+
+#contenedorTabla
+{
+    margin-top: 2%;
+}
+
+.tdTabla 
+{
+    border: 1px solid black;
+    padding: 8px;
+}
+.tdTabla:hover
+{
+    cursor: pointer;
+}
+
+.encabezadoTd
+{
+    background-color: rgb(168, 168, 168);
+}
+.encabezadoTd:hover
+{
+    background-color: rgb(134, 134, 134);
+}
+
+.ciudadano:hover
+{
+    background-color: rgb(160, 255, 255);
+}
+.extranjero:hover
+{
+    background-color: rgb(166, 255, 151);
+}
+
+#contenedor2
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}

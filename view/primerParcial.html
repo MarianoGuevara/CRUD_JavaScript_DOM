@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body id="body">
+    <div id = "padreDeContenedor">
+        <div id="contenedor">
+            <p>Form datos</p>
+            <div>
+                <label>Filtrar por: </label>
+                <select id="miSelect" onchange="FiltrarTablaPorTipos()">
+                    <option value="todos">Todos</option>
+                    <option value="ciudadanos">Ciudadanos</option>
+                    <option value="extranjeros">Extranjeros</option>
+                </select>
+            </div>
+            <div>
+                <label>Calcular edad promedio</label>
+                <button onclick="PromediarEdadesTabla(2024)">Calcular</button>
+                <input id="promedio" type="text" readonly/>
+            </div>
+            <p>Mostrar columnas: </p>
+            <div class="checkboxs">
+            </div>
+            <div id="contenedorTabla">
+            </div>
+            <button style="margin-top: 5%;" onclick="AceptarTabla()">Agregar</button>
+        </div>
+        <div id="contenedor2">
+            <p>Formulario ABM</p>
+            <div style="margin-top: 5%;">
+                <label>Id</label>
+                <input type="text" id="ABMid" readonly>
+            </div>
+            <div style="margin-top: 5%;">
+                <label>Nombre</label>
+                <input type="text" id="ABMnombre">
+            </div>
+            <div style="margin-top: 5%;">
+                <label>Apellido</label>
+                <input type="text" id="ABMapellido">
+            </div>
+            <div style="margin-top: 5%;">
+                <label>Fecha nacimiento</label>
+                <input type="text" id="ABMfechaNacimiento">
+            </div>
+            <div style="margin-top: 5%;">
+                <label>Tipo: </label>
+                <select id="miSelectABM" onchange="CambiarLabelAtr()">
+                    <option value="ciudadano" selected>Ciudadano</option>
+                    <option value="extranjero">Extranjero</option>
+                </select>
+            </div>
+            <div style="margin-top: 5%;">
+                <label class="labelAtr">Dni</label>
+                <input type="text" id="ABMatr1">
+            </div>
+            <div style="margin-top: 5%;" class="BotonesABM">
+                <button id="AceptarABM" onclick="AgregarObjeto()">Aceptar</button>
+                <button id="CancelarABM" onclick="ActivarDesactivarForms(true)">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="../controller/main.js"></script>
+</html>
