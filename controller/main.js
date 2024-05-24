@@ -1,6 +1,6 @@
 import {Ciudadano} from "../model/Ciudadano.js"; // importar todo desde perspectiva de HTML.
 import {Extranjero} from "../model/Extranjero.js"; 
-console.log("olsssss");
+
 //#region De un tipo a otro
 function StringToArrayObjeto(arrayString) { return JSON.parse(arrayString);}
 
@@ -107,6 +107,7 @@ function FiltrarTablaPorTipos()
     BorrarFilasTabla();
     DibujarFilasTabla(arrayObjetosFiltrada, arrayClasesTr, arrayColumnasTabla, document.getElementsByClassName("tablaEntera")[0]);
 }
+window.FiltrarTablaPorTipos = FiltrarTablaPorTipos;
 
 function FiltrarArrayObjetos(arrayObjetos, strTipo)
 {
@@ -143,6 +144,7 @@ function PromediarEdadesTabla(actualYear)
     let promedio = CalcularPromedio(arrayObjetosFiltrada, "fechaNacimiento", actualYear);
     ExtraerObjetoID("promedio").value = promedio;
 }
+window.PromediarEdadesTabla = PromediarEdadesTabla;
 
 function CalcularPromedio(lista, keyCalcular, actualYear)
 {
@@ -312,8 +314,9 @@ function ActualizarTabla()
     let clasesTr = ListaClasesTr(arrayObjetosFinalCopia);
     DibujarFilasTabla(arrayObjetosFinalCopia, clasesTr, arrayColumnasTabla, document.getElementsByClassName("tablaEntera")[0]);
 }
+window.AceptarTabla = AceptarTabla; // hacerla global para q el html la reconozca
 
-function AceptarTabla()
+export function AceptarTabla()
 {
     ActivarDesactivarForms(false);
     ExtraerObjetoID("AceptarABM").textContent = "Agregar";
@@ -354,6 +357,7 @@ function ActivarDesactivarForms(tablaActivar, editar=false, indiceIgualdad=null)
 
     if (ExtraerObjetoID("miSelect") != null) FiltrarTablaPorTipos(); 
 }
+window.ActivarDesactivarForms = ActivarDesactivarForms;
 
 function LimpiarInputsAMB()
 {
@@ -373,6 +377,7 @@ function CambiarLabelAtr()
     if (slider.value == "ciudadano") lblAtr1.textContent = "Dni";
     else lblAtr1.textContent = "Pais de origen";
 }
+window.CambiarLabelAtr = CambiarLabelAtr;
 
 function GenerarBtnEliminarABM(eliminar=false)
 {
@@ -436,6 +441,7 @@ function AgregarObjeto()
     ActivarDesactivarForms(true);
     ActualizarTabla();
 }
+window.AgregarObjeto = AgregarObjeto;
 
 function EditarABM(filaTr)
 {
@@ -532,6 +538,3 @@ try
 catch (e) {alert(e.message);}
 
 formABMActualTotal = EliminarObjeto(ExtraerObjetoID("padreDeContenedor"), ExtraerObjetoID("contenedor2"));
-
-//#endregion
-// export { Mai };
