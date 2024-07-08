@@ -1,6 +1,6 @@
 # CRUD (create, read, update, delete) 
 
-### Utilizando HTML, CSS y JAVASCRIPT genero un CRUD a traves del aprovechamiento de la manipulación de objetos html dinámica de AJAX.
+### Utilizando HTML, CSS y JAVASCRIPT genero un CRUD a traves del aprovechamiento de la manipulación de objetos html dinámica de DOM.
 
 ![imagenLocal](archivos/1.png)
 ![imagenLocal](archivos/2.png)
